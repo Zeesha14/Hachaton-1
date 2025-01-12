@@ -76,3 +76,24 @@ button {
 button:hover {
     background-color: #ff737c;
 }
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .resume-container {
+        flex-wrap: nowrap; /* Prevent wrapping on medium and larger screens */
+    }
+    .left-section {
+        width: 35%; /* Restore original width for medium and larger screens */
+        text-align: left; /* Align text to the left */
+    }
+    .right-section {
+        width: 65%; /* Restore original width for medium and larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile-picture {
+        width: 150px; /* Larger profile picture on larger screens */
+        height: 150px;
+    }
+}
