@@ -1,29 +1,32 @@
-/* General Style */
+/* General Styling */
 body {
-    font-family: 'Arial' , sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    margin: 150;
+    margin: 0;
+    padding: 0;
 }
 
 .resume-container {
     display: flex;
     background-color: white;
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    
+    flex-wrap: wrap;
 }
 
-/* Left Section Style */
+/* Left Section Styling */
 .left-section {
-    background-color: blue;
+    background-color: #2c2c2c;
     color: white;
     padding: 20px;
     width: 35%;
-    text-align: 5px solid #e63946;
-
+    text-align: center;
+    border-right: 5px solid #e63946;
+    box-sizing: border-box;
 }
+
 .profile-picture {
     width: 150px;
     height: 150px;
@@ -33,67 +36,96 @@ body {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 24px;
+    margin: 10px 0 30px;
+    text-align: center;
+}
 
 h3 {
     font-size: 18px;
-    padding: 2%;
-    margin: 20px 0 10px;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #e63946;
-    margin-top: 5%;
+    margin: 20px 0;
+    color: #e63946;
+    text-shadow: 0 0 2px black;
+    text-transform: uppercase
 }
-
 
 ul {
-    list-style-type: fill round;
-    padding: 10;
-    margin: 10px o;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-
 
 ul li {
     margin: 5px 0;
 }
 
-/* Right Section Style */
+/* Right Section Styling */
 .right-section {
     padding: 20px;
     width: 65%;
-
+    box-sizing: border-box;
 }
 
 button {
     font-family: Arial, sans-serif;
     border-radius: 10px;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 10px black;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
+    padding: 10px;
 }
-
 
 button:hover {
     background-color: #ff737c;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .resume-container {
-        flex-wrap: nowrap; /* Prevent wrapping on medium and larger screens */
+        flex-direction: column;
+        width: 90%;
     }
-    .left-section {
-        width: 35%; /* Restore original width for medium and larger screens */
-        text-align: left; /* Align text to the left */
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 15px;
     }
-    .right-section {
-        width: 65%; /* Restore original width for medium and larger screens */
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
     .profile-picture {
-        width: 150px; /* Larger profile picture on larger screens */
-        height: 150px;
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
     }
 }
